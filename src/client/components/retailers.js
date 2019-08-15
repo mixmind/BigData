@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import history from '../history';
-import RetailersChart from './RetailersChart';
+import RetailersChart from './retailerschart';
 
 import '../app.css';
 
-class Retailers extends Component {
+class retailers extends Component {
   onClickHandler = () => {
     history.push('/');
   };
@@ -25,4 +25,4 @@ class Retailers extends Component {
   }
 }
 
-export default Retailers;
+export default retailers;

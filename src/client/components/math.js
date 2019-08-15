@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import history from '../history';
 
-import ProductBuyChart from './ProductBuyChart';
-import ProductPriceChart from './ProductPriceChart';
+import Buy from './prodbuy';
+import Price from './prodprice';
 
 import '../app.css';
 
-class Math extends Component {
+class math extends Component {
   onClickHandler = () => {
     history.push('/');
   };
@@ -20,12 +20,12 @@ class Math extends Component {
           <p className="title">Math</p>
         </div>
         <div className="charts_container center">
-          <ProductBuyChart />
-          <ProductPriceChart />
+          <Buy />
+          <Price />
         </div>
       </Fragment>
     );
   }
 }
 
-export default Math;
+export default math;

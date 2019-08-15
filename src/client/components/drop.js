@@ -31,7 +31,7 @@ const options = [
   { value: 'salmon 1kg', label: 'Salmon 1kg' },
 ];
 
-class Dropdown extends Component {
+class drop extends Component {
   constructor(props) {
   super(props);
 
@@ -58,4 +58,4 @@ class Dropdown extends Component {
   }
 }
 
-export default Dropdown;
+export default drop;

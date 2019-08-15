@@ -4,7 +4,7 @@ import axios from 'axios'
 
 import '../app.css'
 
-class Upload extends Component {
+class upload extends Component {
   constructor() {
     super()
     this.state = {
@@ -64,4 +64,4 @@ class Upload extends Component {
   }
 }
 
-export default Upload
+export default upload

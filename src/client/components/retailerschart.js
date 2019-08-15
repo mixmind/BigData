@@ -10,7 +10,7 @@ import axios from 'axios';
 
 import '../app.css';
 
-class RetailersChart extends Component {
+class retailerschart extends Component {
   constructor(props) {
     super(props);
     const optionsretailers = {
@@ -144,4 +144,4 @@ class RetailersChart extends Component {
   }
 }
 
-export default RetailersChart;
+export default retailerschart;

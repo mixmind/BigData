@@ -3,7 +3,7 @@ import history from '../history';
 
 import '../app.css';
 
-class Main extends Component {
+class main extends Component {
   uploadFile = () => {
     history.push('/upload');
   };
@@ -35,4 +35,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default main;

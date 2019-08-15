@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import {Bar as BarChart} from 'react-chartjs-2';
 import axios from 'axios';
-import Dropdown from './Dropdown'
+import drop from './drop'
 import DatePicker from "react-datepicker";
 import Select from 'react-select';
 
@@ -37,7 +37,7 @@ const options = [
   { value: 'salmon 1kg', label: 'Salmon 1kg' },
 ];
 
-class ProductBuyChart extends Component {
+class prodbuy extends Component {
   constructor(props) {
       super(props);
 
@@ -175,4 +175,4 @@ render() {
  }
 }
 
-export default ProductBuyChart;
+export default prodbuy;
