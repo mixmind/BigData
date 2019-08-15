@@ -2,11 +2,10 @@ import React, { Component, Fragment } from 'react';
 import history from '../history';
 
 import Buy from './prodbuy';
-import Price from './prodprice';
 
 import '../app.css';
 
-class math extends Component {
+class mathbuy extends Component {
   onClickHandler = () => {
     history.push('/');
   };
@@ -14,18 +13,17 @@ class math extends Component {
   render() {
     return (
       <Fragment>
-        <div className="math">
+        <div className="mathbuy">
           {/* eslint-disable-next-line react/button-has-type */}
           <button className="btn-back left" onClick={this.onClickHandler}>Back</button>
-          <p className="title">Math</p>
+          <p className="title">Buy Math</p>
         </div>
         <div className="charts_container center">
           <Buy />
-          <Price />
         </div>
       </Fragment>
     );
   }
 }
 
-export default math;
+export default mathbuy;

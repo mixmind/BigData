@@ -8,8 +8,12 @@ class main extends Component {
     history.push('/upload');
   };
 
-  math = () => {
-    history.push('/math');
+  mathprice = () => {
+    history.push('/mathprice');
+  };
+
+  mathbuy = () => {
+    history.push('/mathbuy');
   };
 
   retailers = () => {
@@ -25,7 +29,8 @@ class main extends Component {
             {/* eslint-disable-next-line react/button-has-type */}
             <button onClick={this.uploadFile} className="button-invoice">Upload invoice</button>
             {/* eslint-disable-next-line react/button-has-type */}
-            <button onClick={this.math} className="button-two">Some math</button>
+            <button onClick={this.mathprice} className="button-two">Price math</button>
+            <button onClick={this.mathbuy} className="button-two">Buy math</button>
             {/* eslint-disable-next-line react/button-has-type */}
             <button onClick={this.retailers} className="button-three">Retailers</button>
           </div>

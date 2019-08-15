@@ -133,7 +133,11 @@ body {
     background-color: #e6a0e7;
 }
 
-.math {
+.mathbuy {
+    display: flex;
+    justify-content: center;
+}
+.mathprice {
     display: flex;
     justify-content: center;
 }
