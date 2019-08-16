@@ -24,7 +24,7 @@ class upload extends Component {
     data.append('file', this.state.selectedFile, this.state.selectedFile.name)
 
     axios
-      .post("http://35.128.177.111:8080/upload", data, {
+      .post("http://35.208.177.111:8080/upload", data, {
         onUploadProgress: ProgressEvent => {
           this.setState({
             loaded: (ProgressEvent.loaded / ProgressEvent.total) * 100,
