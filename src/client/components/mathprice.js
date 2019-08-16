@@ -14,8 +14,6 @@ class mathprice extends Component {
     return (
       <Fragment>
         <div className="mathprice">
-          {/* eslint-disable-next-line react/button-has-type */}
-          <button className="btn-back left" onClick={this.onClickHandler}>חזרה</button>
           <p className="title">מחיר ברשתות</p>
         </div>
         <div className="charts_container center">

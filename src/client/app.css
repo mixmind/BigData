@@ -49,9 +49,7 @@ body {
   justify-content: center;
   display: block;
   padding: 10px;
-  margin-right: 20px;
-  border-radius: 8px;
-  background-color: #e6a0e7;
+  background-color: #10aee7;
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
   font-size: 20px;
   text-align: center;
@@ -119,19 +117,6 @@ body {
   padding: 5px;
 }
 
-.btn-back {
-    width: 100px;
-    height: 40px;
-    margin: 8px;
-    padding: 8px;
-    font-size: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    background-color: #e6a0e7;
-}
 
 .mathbuy {
     display: flex;
@@ -157,7 +142,7 @@ body {
     cursor: pointer;
     display: flex;
     justify-content: center;
-    background-color: #e6a0e7;
+    background-color: #10aee7;
 }
 
 .chart-main {

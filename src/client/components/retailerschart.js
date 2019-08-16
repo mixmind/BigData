@@ -40,7 +40,7 @@ class retailerschart extends Component {
 
   componentDidMount = (e) => {
     axios
-      .get('http://localhost:8080/retailers')
+      .get('http://35.128.177.111:8080/retailers')
       .then((response) => {
         console.log(response.data);
         const lables = [];

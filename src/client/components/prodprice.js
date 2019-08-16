@@ -94,7 +94,7 @@ class prodprice extends Component {
         console.log(body);
         e.preventDefault();
         axios
-        .post("http://localhost:8080/product-price", body)
+        .post("http://35.128.177.111:8080/product-price", body)
         .then(response => {
           this.setState({showGraph: true})
           console.log(response.data);

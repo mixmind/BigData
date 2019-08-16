@@ -24,7 +24,7 @@ class upload extends Component {
     data.append('file', this.state.selectedFile, this.state.selectedFile.name)
 
     axios
-      .post("http://localhost:8080/upload", data, {
+      .post("http://35.128.177.111:8080/upload", data, {
         onUploadProgress: ProgressEvent => {
           this.setState({
             loaded: (ProgressEvent.loaded / ProgressEvent.total) * 100,
@@ -44,7 +44,6 @@ class upload extends Component {
   render() {
     return (
       <Fragment>
-        <button className="btn-back left" onClick={this.onClickHandler}> חזרה </button>
         <p className="title">העלת קובץ </p>
         <div className="buttons1">
         <link
