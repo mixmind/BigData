@@ -50,7 +50,7 @@ class upload extends Component {
           href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
           rel="stylesheet"/>
         <span className="btn btn-primary btn-file">
-           בחר קוזץ<input type="file" onChange={this.handleselectedFile}/>
+           בחר קובץ<input type="file" onChange={this.handleselectedFile}/>
         </span>
         <button className="files-btn" onClick={this.handleUpload}>לשלוח</button>
         <div>

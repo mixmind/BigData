@@ -73,7 +73,7 @@ class prodbuy extends Component {
       onSubmitHandler = (e) => {
         console.log(this.state.selectedOption['value']);
         if (this.state.selectedOption['value'] == null) {
-          alert("You have to choose product!")
+          alert("צריך לבחור מוצר")
           exit();
         }
 
