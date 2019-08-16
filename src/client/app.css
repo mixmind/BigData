@@ -74,6 +74,7 @@ body {
     position: relative;
     overflow: hidden;
     margin: 10px;
+    height: 35px;
 }
 .btn-file input[type=file] {
     position: absolute;
@@ -87,7 +88,7 @@ body {
     outline: none;
     background: white;
     width: 100px;
-    height: 30px;
+    height: 35px;
     margin: 8px;
     padding: 8px;
     font-size: 20px;
@@ -97,15 +98,16 @@ body {
     justify-content: center;
 }
 .files-btn {
-    width: 100px;
-    height: 40px;
-    margin: 8px;
-    padding: 8px;
-    font-size: 20px;
-    border-radius: 5px;
+    margin-top: 10px;
+    border-radius: 4px;
+    width: 90px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
     display: flex;
     justify-content: center;
+    background-color: #e7cfcf;
 }
 
 .text-upload,
@@ -135,8 +137,8 @@ body {
 .btn-volume {
     margin: 5px;
     border-radius: 4px;
-    width: 90px;
-    height: 40px;
+    width: 60px;
+    height: 35px;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
@@ -173,9 +175,10 @@ body {
 }
 
 .select-dropdown {
-   width: 300px;
+   width: 150px;
    margin-top: 55px;
    margin: 5px;
+    height: 35px;
 }
 
 .data-to-pick {
@@ -186,6 +189,7 @@ body {
 
 .date {
   margin: 5px;
+    width: 90px;
   padding: 4px;
     display: flex;
     justify-content: center;

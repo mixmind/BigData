@@ -53,9 +53,12 @@ class upload extends Component {
            בחר קובץ<input type="file" onChange={this.handleselectedFile}/>
         </span>
         <button className="files-btn" onClick={this.handleUpload}>לשלוח</button>
-        <div>
-          {this.state.done ? <p> קובץ הועלה בהצלחה </p> : <p> </p>}
         </div>
+        <div className="buttons1">
+          <div>
+            {this.state.done ? <p> קובץ הועלה בהצלחה </p> : <p> </p>}
+          </div>
+
         </div>
 
       </Fragment>
