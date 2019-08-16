@@ -1,4 +1,5 @@
-const vendors = ["Rami Levy - Hashikma Marketing", "Mega", "Shufersal", "Hazi-Hinam", "Osher ad","Victory","Tiv-Taam", "AM:PM"]
+const vendors = ["רמי לוי שיווק השקמה", "מגה", "שופרסל", "חצי-חינם", "אושר עד",
+          "ויקטורי", "טיב-טעם", "AM:PM"]
 
 const products = [  
     {  

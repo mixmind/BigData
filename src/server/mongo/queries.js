@@ -6,10 +6,10 @@ const dbUrl = 'mongodb://mongoadmin:secret@localhost:27017';
 
 let db;
 
-const retailers = ["Rami Levy - Hashikma Marketing", "Mega", "Shufersal", "Hazi-Hinam", "Osher ad",
-          "Victory", "Tiv-Taam", "AM:PM"];
+const retailers = ["רמי לוי שיווק השקמה", "מגה", "שופרסל", "חצי-חינם", "אושר עד",
+          "ויקטורי", "טיב-טעם", "AM:PM"];
 
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const months = ["ינואר", "פברואר", "מרס", "אפריל", "מאי", "יוני", "יולי", "אוגוסט", "ספטמבר", "אוקטובר", "נובמבר", "דצמבר"];
 
   function getVolume(productName, start, end, callBack) {
   MongoClient.connect(dbUrl, { useNewUrlParser: true }, function(err, client) {

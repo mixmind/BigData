@@ -28,14 +28,14 @@ module.exports = {
       }
     ]
   },
- 
+
   devServer: {
     port: 3000,
-    host: '127.0.0.1',
+    host: '0.0.0.0',
     open: true,
     proxy: {
-      '/api': 'http://localhost:8080',
-      '/assets': 'http://localhost:8080'
+      '/api': 'http://35.128.177.111:8080',
+      '/assets': 'http://35.128.177.111:8080'
     }
   },
   plugins: [

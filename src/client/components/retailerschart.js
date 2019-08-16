@@ -57,7 +57,7 @@ class retailerschart extends Component {
           labels: lables,
           beginAtZero: true,
           datasets: [{
-            label: 'Total incomes',
+            label: 'סה"כ הכנסה',
             backgroundColor: ['#1220cd',
               '#a20ca1', '#00ba9f',
               '#e86e11', '#66dce4',
@@ -68,7 +68,7 @@ class retailerschart extends Component {
             data: totalSum,
             yAxisID: 'y-axis-sum'
           }, {
-            label: 'Total invoices',
+            label: 'סה"כ חשבוניות',
             backgroundColor: ['#5b667c',
               '#830681', '#007a66',
               '#903f0b', '#47939b',

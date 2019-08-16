@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import {Polar as RadChart} from 'react-chartjs-2';
 import axios from 'axios';
-import drop from './drop'
 import DatePicker from "react-datepicker";
 import Select from 'react-select';
 
@@ -10,31 +9,31 @@ import "react-datepicker/dist/react-datepicker.css";
 import '../app.css'
 
 const options = [
-  { value: 'milk 1%', label: 'Milk 1%' },
-  { value: 'milk 3%', label: 'Milk 3%' },
-  { value: 'white bread', label: 'White Bread' },
-  { value: 'brown bread', label: 'Brown Bread' },
-  { value: 'butter', label: 'Butter' },
-  { value: 'white cheese', label: 'White Cheese' },
-  { value: 'eggs XL', label: 'Eggs XL' },
-  { value: 'eggs L', label: 'Eggs L' },
-  { value: 'eggs M', label: 'Eggs M' },
-  { value: 'kotej', label: 'Kotej' },
-  { value: 'onion 1kg', label: 'Onion 1kg' },
-  { value: 'tester choise', label: 'Tester Choise' },
-  { value: 'banana 1kg', label: 'Banana 1kg' },
-  { value: 'milki', label: 'Milki' },
-  { value: 'sugar', label: 'Sugar' },
-  { value: 'tuna', label: 'Tuna' },
-  { value: 'pasta', label: 'Pasta' },
-  { value: 'ketchup', label: 'Ketchup' },
-  { value: 'sweet corn', label: 'Sweet Corn' },
-  { value: 'Coca Cola Zero', label: 'Coca Cola Zero' },
-  { value: 'humus', label: 'Humus' },
-  { value: 'chiken 1kg', label: 'Chiken 1kg' },
-  { value: 'Water 6pc', label: 'Water 6pc' },
-  { value: 'potato', label: 'Potato' },
-  { value: 'salmon 1kg', label: 'Salmon 1kg' },
+  { value: 'milk 1%', label: 'חלב 1%' },
+  { value: 'milk 3%', label: 'חלב 3%' },
+  { value: 'white bread', label: 'לחם לבן' },
+  { value: 'brown bread', label: 'לחם שחור' },
+  { value: 'butter', label: 'חמאה' },
+  { value: 'white cheese', label: 'גבינה לבנה' },
+  { value: 'eggs XL', label: 'ביצים XL' },
+  { value: 'eggs L', label: 'ביצים L' },
+  { value: 'eggs M', label: 'ביצים M' },
+  { value: 'kotej', label: 'קוטג' },
+  { value: 'onion 1kg', label: 'בצל 1 ק"ג' },
+  { value: 'tester choise', label: 'טסטר צ\'ויס' },
+  { value: 'banana 1kg', label: 'בננה 1 ק"ג' },
+  { value: 'milki', label: 'מילקי' },
+  { value: 'sugar', label: 'סוכר' },
+  { value: 'tuna', label: 'טונה' },
+  { value: 'pasta', label: 'פסטה' },
+  { value: 'ketchup', label: 'קטשופ' },
+  { value: 'sweet corn', label: 'טירס מטוק' },
+  { value: 'Coca Cola Zero', label: 'קולה זירו' },
+  { value: 'humus', label: 'חומוס' },
+  { value: 'chiken 1kg', label: 'אוף 1 ק"ג' },
+  { value: 'Water 6pc', label: 'מים 6' },
+  { value: 'potato', label: 'תפוח אדמה' },
+  { value: 'salmon 1kg', label: 'סלומון 1 ק"ג' },
 ];
 
 class prodprice extends Component {
@@ -81,7 +80,7 @@ class prodprice extends Component {
 
       onSubmitHandler = (e) => {
         if (this.state.selectedOption['value'] == null) {
-          alert("You have to choose product!")
+          alert("צריך לבחור מוצר")
           exit();
         }
 
@@ -154,19 +153,18 @@ render() {
    return (
      <Fragment>
      <div className={this.state.showGraph ? "container" : ""}>
-     <h2 className="chart-title">Choose product and dates to compare his price between retailers: </h2>
-     <div className="data-to-pick">
-        <p>From:
-        <DatePicker selected={this.state.startDate} onChange={this.handleChangeStart} className="date" dateFormat="dd/MM/yyyy"/></p>
-        <p>To:   <DatePicker selected={this.state.endDate} onChange={this.handleChangeEnd} className="date" dateFormat="dd/MM/yyyy"/></p>
-        <Select
-          value={this.state.selectedOption}
-          onChange={this.handleChange}
-          options={options}
-          className= "select-dropdown"
-        />
-        <button className="btn-volume" onClick={this.onSubmitHandler}>Send!</button>
-     </div>
+     <h2 className="chart-title">בחר מוצר להשוות מחיר</h2>
+       <div className="data-to-pick">
+         <Select
+           value={this.state.selectedOption}
+           onChange={this.handleChange}
+           options={options}
+           className= "select-dropdown"
+         />
+         <p><DatePicker selected={this.state.endDate} onChange={this.handleChangeEnd} className="date" dateFormat="dd/MM/yyyy"/>:ל </p>
+         <p><DatePicker selected={this.state.startDate} onChange={this.handleChangeStart} className="date" dateFormat="dd/MM/yyyy"/>:מ </p>
+         <button className="btn-volume" onClick={this.onSubmitHandler}>בדוק</button>
+       </div>
 
      {this.state.showGraph ?
      <div className="chart-main col-centered">

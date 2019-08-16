@@ -24,15 +24,15 @@ class main extends Component {
     return (
       <Fragment>
         <div className="main-page">
-          <p className="title top">Bigdata</p>
+          <p className="title top">מסדי ענק</p>
           <div className="buttons">
             {/* eslint-disable-next-line react/button-has-type */}
-            <button onClick={this.uploadFile} className="button-invoice">Upload invoice</button>
+            <button onClick={this.uploadFile} className="button-invoice">העלת קובץ</button>
             {/* eslint-disable-next-line react/button-has-type */}
-            <button onClick={this.mathprice} className="button-two">Price math</button>
-            <button onClick={this.mathbuy} className="button-two">Buy math</button>
+            <button onClick={this.mathprice} className="button-two">מחיר ברשתות</button>
+            <button onClick={this.mathbuy} className="button-two">כמות קניות</button>
             {/* eslint-disable-next-line react/button-has-type */}
-            <button onClick={this.retailers} className="button-three">Retailers</button>
+            <button onClick={this.retailers} className="button-three">רשתות מזון</button>
           </div>
         </div>
       </Fragment>

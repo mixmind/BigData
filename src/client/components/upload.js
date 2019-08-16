@@ -44,18 +44,18 @@ class upload extends Component {
   render() {
     return (
       <Fragment>
-        <button className="btn-back left" onClick={this.onClickHandler}> Back </button>
-        <p className="title">Upload invoice </p>
+        <button className="btn-back left" onClick={this.onClickHandler}> חזרה </button>
+        <p className="title">העלת קובץ </p>
         <div className="buttons1">
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
           rel="stylesheet"/>
         <span className="btn btn-primary btn-file">
-           Choose File<input type="file" onChange={this.handleselectedFile}/>
+           בחר קוזץ<input type="file" onChange={this.handleselectedFile}/>
         </span>
-        <button className="files-btn" onClick={this.handleUpload}>Upload</button>
+        <button className="files-btn" onClick={this.handleUpload}>לשלוח</button>
         <div>
-          {this.state.done ? <p> file uploaded </p> : <p> </p>}
+          {this.state.done ? <p> קובץ הועלה בהצלחה </p> : <p> </p>}
         </div>
         </div>
 
