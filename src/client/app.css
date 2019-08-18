@@ -33,6 +33,16 @@ body {
     display: flex;
     justify-content: center;
 }
+.button {
+    justify-content: center;
+    display: block;
+
+}
+.uplButton {
+    position: absolute;
+    top:8px;
+    left:0;
+}
 .buttons1 {
     display: flex;
     justify-content: center;
@@ -57,16 +67,6 @@ body {
   cursor: pointer;
 }
 
-.upload-main {
-  display: block;
-    justify-content: center;
-  align-content: center;
-  width: 500px;
-  margin: 10px;
-  padding: 5px;
-  margin: 10px;
-  margin-top: 30px;
-}
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -105,8 +105,7 @@ body {
     background-color: #e7da48;
 }
 
-.text-upload,
-.upload-persent {
+.text-upload{
   font-size: 14px;
   font-family: sans-serif;
     display: flex;
@@ -128,6 +127,10 @@ body {
     display: flex;
     justify-content: center;
 }
+.upload {
+    display: flex;
+    justify-content: center;
+}
 
 .btn-volume {
     margin: 5px;
@@ -140,6 +143,7 @@ body {
     justify-content: center;
     background-color: #e7da48;
 }
+
 
 .chart-main {
   width: 800px;

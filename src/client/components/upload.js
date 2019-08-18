@@ -3,6 +3,7 @@ import history from '../history';
 import axios from 'axios'
 
 import '../app.css'
+import Ripples from 'react-ripples';
 
 class upload extends Component {
   constructor() {
@@ -40,11 +41,34 @@ class upload extends Component {
   onClickHandler = (e) => {
       history.push("/");
   }
+  uploadFile = () => {
+    history.push('/upload');
+  };
+
+  mathprice = () => {
+    history.push('/mathprice');
+  };
+
+  mathbuy = () => {
+    history.push('/mathbuy');
+  };
+
+  retailers = () => {
+    history.push('/retailers');
+  };
 
   render() {
     return (
       <Fragment>
-        <p className="title">העלת קובץ </p>
+        <div className="upload">
+        <p className="title top">העלת קובץ </p>
+        </div>
+        <div className="uplButton" role="group">
+          <button onClick={this.uploadFile} className="button-invoice">העלת קובץ</button>
+          <button onClick={this.mathprice} className="button-two">מחיר ברשת</button>
+          <button onClick={this.mathbuy} className="button-two">כמות קניות</button>
+          <button onClick={this.retailers} className="button-three">רשתות מזון</button>
+        </div>
         <div className="buttons1">
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
@@ -66,4 +90,4 @@ class upload extends Component {
   }
 }
 
-export default upload
+export default upload;
