@@ -41,6 +41,7 @@ body {
 .uplButton {
     position: absolute;
     top:8px;
+    font-weight: bold;
     left:0;
 }
 .buttons1 {

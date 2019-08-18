@@ -29,7 +29,7 @@ class retailers extends Component {
       <Fragment>
         <div className="retailers">
           <p className="title">רשתות מזון</p>
-          <div className="btn-group-vertical left" role="group">
+          <div className="uplButton" role="group">
             <button onClick={this.uploadFile} className="button-invoice">העלת קובץ</button>
             <button onClick={this.mathprice} className="button-two">מחיר ברשת</button>
             <button onClick={this.mathbuy} className="button-two">כמות קניות</button>
