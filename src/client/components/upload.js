@@ -62,12 +62,12 @@ class upload extends Component {
       <Fragment>
         <div className="upload">
         <p className="title top">העלת קובץ </p>
-        </div>
-        <div className="uplButton" role="group">
-          <button onClick={this.uploadFile} className="button-invoice">העלת קובץ</button>
-          <button onClick={this.mathprice} className="button-two">מחיר ברשת</button>
-          <button onClick={this.mathbuy} className="button-two">כמות קניות</button>
-          <button onClick={this.retailers} className="button-three">רשתות מזון</button>
+          <div className="uplButton" role="group">
+            <button onClick={this.uploadFile} className="button-invoice">העלת קובץ</button>
+            <button onClick={this.mathprice} className="button-two">מחיר ברשת</button>
+            <button onClick={this.mathbuy} className="button-two">כמות קניות</button>
+            <button onClick={this.retailers} className="button-three">רשתות מזון</button>
+          </div>
         </div>
         <div className="buttons1">
         <link
