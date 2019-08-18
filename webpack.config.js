@@ -36,13 +36,15 @@ module.exports = {
     proxy: {
       '/api': 'http://35.128.177.111:8080',
       '/assets': 'http://35.128.177.111:8080'
-    }
+    },
+    publicPath: '/',
+    historyApiFallback: true,
   },
   plugins: [
     new CleanWebpackPlugin([outputDirectory]),
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      favicon: './public/icon.svg'
+      favicon: './public/favicon.ico'
     })
   ]
 };

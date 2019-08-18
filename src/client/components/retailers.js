@@ -8,6 +8,7 @@ class retailers extends Component {
   onClickHandler = () => {
     history.push('/');
   };
+
   uploadFile = () => {
     history.push('/upload');
   };
@@ -30,6 +31,7 @@ class retailers extends Component {
         <div className="retailers">
           <p className="title">רשתות מזון</p>
           <div className="uplButton" role="group">
+            <button onClick={this.onClickHandler} className="button-invoice">עמוד הבית</button>
             <button onClick={this.uploadFile} className="button-invoice">העלת קובץ</button>
             <button onClick={this.mathprice} className="button-two">מחיר ברשת</button>
             <button onClick={this.mathbuy} className="button-two">כמות קניות</button>

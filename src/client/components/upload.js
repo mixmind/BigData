@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react'
+import axios from 'axios';
 import history from '../history';
-import axios from 'axios'
+import '../app.css';
 
-import '../app.css'
-import Ripples from 'react-ripples';
+
 
 class upload extends Component {
   constructor() {
@@ -14,6 +14,7 @@ class upload extends Component {
       done: false
     }
   }
+
   handleselectedFile = event => {
     this.setState({
       selectedFile: event.target.files[0],
@@ -38,7 +39,7 @@ class upload extends Component {
       })
   }
 
-  onClickHandler = (e) => {
+  onClickHandler = () => {
       history.push("/");
   }
   uploadFile = () => {
@@ -63,6 +64,7 @@ class upload extends Component {
         <div className="upload">
         <p className="title top">העלת קובץ </p>
           <div className="uplButton" role="group">
+            <button onClick={this.onClickHandler} className="button-invoice">עמוד הבית</button>
             <button onClick={this.uploadFile} className="button-invoice">העלת קובץ</button>
             <button onClick={this.mathprice} className="button-two">מחיר ברשת</button>
             <button onClick={this.mathbuy} className="button-two">כמות קניות</button>

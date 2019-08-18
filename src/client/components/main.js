@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
+import Ripples from 'react-ripples';
 import history from '../history';
-import Ripples from 'react-ripples'
 
 
 import '../app.css';
@@ -21,7 +21,7 @@ class main extends Component {
   retailers = () => {
     history.push('/retailers');
   };
-/**/
+
   render() {
     return (
       <Fragment>
