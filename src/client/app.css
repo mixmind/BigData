@@ -48,10 +48,10 @@ body {
 .button-invoice {
   justify-content: center;
   display: block;
-  padding: 10px;
+    width: 90px;
+    height: 35px;
   background-color: #e7da48;
-  box-shadow: 0 0 8px rgba(0,0,0,0.3);
-  font-size: 20px;
+  font-size: 14px;
   text-align: center;
   font-weight: bold;
   cursor: pointer;
@@ -66,15 +66,12 @@ body {
   padding: 5px;
   margin: 10px;
   margin-top: 30px;
-  border: 0.5px solid black;
-  border-radius: 4px;
-  box-shadow: 5px 5px #888888;
 }
 .btn-file {
     position: relative;
     overflow: hidden;
     margin: 10px;
-    height: 35px;
+    height: 30px;
 }
 .btn-file input[type=file] {
     position: absolute;
@@ -87,32 +84,30 @@ body {
     opacity: 0;
     outline: none;
     background: white;
-    width: 100px;
-    height: 35px;
+    width: 60px;
+    height: 30px;
     margin: 8px;
     padding: 8px;
-    font-size: 20px;
-    border-radius: 5px;
+    font-size: 14px;
     cursor: pointer;
     display: flex;
     justify-content: center;
 }
 .files-btn {
     margin-top: 10px;
-    border-radius: 4px;
-    width: 90px;
-    height: 35px;
-    font-size: 18px;
+    width: 60px;
+    height: 30px;
+    font-size: 14px;
     font-weight: bold;
     cursor: pointer;
     display: flex;
     justify-content: center;
-    background-color: #e7cfcf;
+    background-color: #e7da48;
 }
 
 .text-upload,
 .upload-persent {
-  font-size: 20px;
+  font-size: 14px;
   font-family: sans-serif;
     display: flex;
     justify-content: center;
@@ -136,10 +131,9 @@ body {
 
 .btn-volume {
     margin: 5px;
-    border-radius: 4px;
     width: 60px;
-    height: 35px;
-    font-size: 18px;
+    height: 30px;
+    font-size: 14px;
     font-weight: bold;
     cursor: pointer;
     display: flex;
@@ -178,7 +172,7 @@ body {
    width: 150px;
    margin-top: 55px;
    margin: 5px;
-    height: 35px;
+    height: 30px;
 }
 
 .data-to-pick {
@@ -191,6 +185,7 @@ body {
   margin: 5px;
     width: 90px;
   padding: 4px;
+    height: 30px;
     display: flex;
     justify-content: center;
   font-size: 15px;
