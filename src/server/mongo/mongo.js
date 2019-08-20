@@ -1,6 +1,3 @@
-/* insert new invoices to MongoDB
- if the invoice provider is in the db it will update is invoices array, else will create new provider */
-
 const MongoClient = require('mongodb').MongoClient,
   assert = require('assert'),
   fs = require('fs')

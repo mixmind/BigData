@@ -22,6 +22,10 @@ class main extends Component {
     history.push('/retailers');
   };
 
+  analyze = () => {
+    history.push('/analyze');
+  };
+
   render() {
     return (
       <Fragment>
@@ -74,6 +78,18 @@ class main extends Component {
             >
               <Ripples color={'yellow'}>
                 <button onClick={this.retailers} className="button-three">רשתות מזון</button>
+              </Ripples>
+            </div>
+            &nbsp;&nbsp;&nbsp;
+            <div
+              style={{
+                display: 'inline-flex',
+                borderRadius: 25,
+                overflow: 'hidden',
+              }}
+            >
+              <Ripples color={'yellow'}>
+                <button onClick={this.analyze} className="button-three">הערכה</button>
               </Ripples>
             </div>
           </div>

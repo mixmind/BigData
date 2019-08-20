@@ -8,6 +8,7 @@ import upload from './components/upload';
 import mathbuy from './components/mathbuy';
 import mathprice from './components/mathprice';
 import retailers from './components/retailers';
+import analyze from './components/analyze';
 
 
 class app extends Component {
@@ -21,6 +22,7 @@ class app extends Component {
                         <Route path='/mathbuy' exact component={mathbuy} />
                         <Route path='/mathprice' exact component={mathprice} />
                         <Route path='/retailers' exact component={retailers} />
+                        <Route path='/analyze' exact component={analyze} />
                     </Switch>
             </Router>
         );
