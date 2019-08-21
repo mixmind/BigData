@@ -6,9 +6,13 @@ const express = require('express'),
  fileUpload = require('express-fileupload'),
  {uploadToHdfs, uploadToMongo, sendToKafka} = require('./utils/functions'),
  {mongoretailerCollection} = require('./mongo/mongo'),
- {getVolume, getPriceChange, getretailersData, getretailerInvoicesSummary} = require('./mongo/queries')
+ {getVolume, getPriceChange, getretailersData, getretailerInvoicesSummary} = require('./mongo/queries'),
+ {createAssociation,getAssociation,createModel} = require('./mongo/bigml'),
+ {test} = require('./mongo/items')
 
- const app = express();
+
+
+const app = express();
 
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -29,6 +33,7 @@ app.post('/upload', (req, res, next) => {
           uploadToHdfs(uploadFile.data, fileName);
           uploadToMongo(fileName);
           mongoretailerCollection(fileName);
+          createAssociation(res);
           next();
         } catch(e) {
           console.log(e);
@@ -84,5 +89,13 @@ app.post('/upload', (req, res, next) => {
       });
     }
   });
+
+app.get('/test1', (req, res) => {
+  console.log('ENTERED TEST')
+  result = createAssociation(res);
+  callback(result)
+  res.status(200).send('TEST');
+});
+
 
 app.listen(process.env.PORT || 8080, () => console.log(`server running on port ${process.env.PORT || 8080}!`));

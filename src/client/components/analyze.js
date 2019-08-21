@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import history from '../history';
+import axios from 'axios';
+
 // eslint-disable-next-line no-unused-vars
 
 import '../app.css';
@@ -26,6 +28,16 @@ class analyze extends Component {
     history.push('/retailers');
   };
 
+
+  handleTEST = () => {
+    console.log('TEST')
+    axios
+      .get('http://localhost:8080/test1').then(res => {
+
+    })
+      };
+
+
   render() {
     return (
       <Fragment>
@@ -38,7 +50,7 @@ class analyze extends Component {
             <button onClick={this.mathbuy} className="button-two">כמות קניות</button>
             <button onClick={this.retailers} className="button-three">רשתות מזון</button>
           </div>
-          <button onClick="test()">Click me</button>
+          <button onClick={this.handleTEST} className="button-three">TEST</button>
         </div>
       </Fragment>
     );

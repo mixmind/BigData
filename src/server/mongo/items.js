@@ -2,7 +2,7 @@ const { MongoClient } = require('mongodb');
 const assert = require('assert');
 // eslint-disable-next-line no-unused-vars
 const path = require('path');
-
+const fs = require('fs');
 const dbUrl = 'mongodb://mongoadmin:secret@localhost:27017';
 
 
@@ -41,3 +41,5 @@ function test() {
     );
   });
 }
+
+module.exports = {test}
