@@ -1,10 +1,11 @@
 import React, { Component, Fragment } from 'react';
-import history from '../history';
 import axios from 'axios';
+import history from '../history';
 
 // eslint-disable-next-line no-unused-vars
 
 import '../app.css';
+import Ripples from 'react-ripples';
 
 
 class analyze extends Component {
@@ -29,20 +30,40 @@ class analyze extends Component {
   };
 
 
-  handleTEST = () => {
-    console.log('TEST')
+  createAss = () => {
     axios
-      .get('http://localhost:8080/test1').then(res => {
+      .get('http://localhost:8080/createAss').then((res) => {
+        console.log(res.data);
+      });
+  };
 
-    })
-      };
+  getAss = () => {
+    axios
+      .get('http://localhost:8080/getAss').then((res) => {
+        console.log(res.data);
+      });
+  };
+
+  createMod = () => {
+    axios
+      .get('http://localhost:8080/createMod').then((res) => {
+        console.log(res.data);
+      });
+  };
+
+  getPred = () => {
+    axios
+      .get('http://localhost:8080/getPred').then((res) => {
+        console.log(res.data);
+      });
+  };
 
 
   render() {
     return (
       <Fragment>
         <div className="retailers">
-          <p className="title">הערכה</p>
+          <p className="title top">הערכה</p>
           <div className="uplButton" role="group">
             <button onClick={this.onClickHandler} className="button-invoice">עמוד הבית</button>
             <button onClick={this.uploadFile} className="button-invoice">העלת קובץ</button>
@@ -50,7 +71,56 @@ class analyze extends Component {
             <button onClick={this.mathbuy} className="button-two">כמות קניות</button>
             <button onClick={this.retailers} className="button-three">רשתות מזון</button>
           </div>
-          <button onClick={this.handleTEST} className="button-three">TEST</button>
+          <div className="buttons">
+            <div
+              style={{
+                display: 'inline-flex',
+                borderRadius: 25,
+                overflow: 'hidden',
+              }}
+            >
+              <Ripples color="yellow">
+                <button onClick={this.createAss} className="button-three">createAss</button>
+              </Ripples>
+            </div>
+            &nbsp;&nbsp;&nbsp;
+            <div
+              style={{
+                display: 'inline-flex',
+                borderRadius: 25,
+                overflow: 'hidden',
+              }}
+            >
+              <Ripples color="yellow">
+                <button onClick={this.getAss} className="button-three">getAss</button>
+
+              </Ripples>
+            </div>
+            &nbsp;&nbsp;&nbsp;
+            <div
+              style={{
+                display: 'inline-flex',
+                borderRadius: 25,
+                overflow: 'hidden',
+              }}
+            >
+              <Ripples color="yellow">
+                <button onClick={this.createMod} className="button-three">createMod</button>
+              </Ripples>
+            </div>
+            &nbsp;&nbsp;&nbsp;
+            <div
+              style={{
+                display: 'inline-flex',
+                borderRadius: 25,
+                overflow: 'hidden',
+              }}
+            >
+              <Ripples color="yellow">
+                <button onClick={this.getPred} className="button-three">getPred</button>
+              </Ripples>
+            </div>
+          </div>
         </div>
       </Fragment>
     );
