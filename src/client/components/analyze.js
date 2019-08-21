@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 import history from '../history';
-
+import Bigml from './bigmlchart';
 // eslint-disable-next-line no-unused-vars
 
 import '../app.css';
@@ -62,7 +62,7 @@ class analyze extends Component {
   render() {
     return (
       <Fragment>
-        <div className="retailers">
+        <div className="analyze">
           <p className="title top">הערכה</p>
           <div className="uplButton" role="group">
             <button onClick={this.onClickHandler} className="button-invoice">עמוד הבית</button>
@@ -120,6 +120,9 @@ class analyze extends Component {
                 <button onClick={this.getPred} className="button-three">getPred</button>
               </Ripples>
             </div>
+          </div>
+          <div className="charts_container center">
+            <Bigml />
           </div>
         </div>
       </Fragment>

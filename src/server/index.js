@@ -72,7 +72,22 @@ app.get('/getPred', (req, res) => {
     res.status(200).send(model);
   });
 });
+app.get('/retailers', async (req, res) => {
+  getretailersData((result) => {
+    res.status(200).send(result);
+  });
+});
 
+app.get('/:retailerId', async (req, res) => {
+  if (!req.params.retailerId) {
+    res.status(404).send();
+  } else {
+    const retailer = req.params.retailerId;
+    getretailerInvoicesSummary(retailer, (result) => {
+      res.status(200).send(result);
+    });
+  }
+});
 
 app.post('/product-volume', async (req, res) => {
   if (!req.body) {
@@ -102,22 +117,7 @@ app.post('/product-price', async (req, res) => {
   });
 });
 
-app.get('/retailers', async (req, res) => {
-  getretailersData((result) => {
-    res.status(200).send(result);
-  });
-});
 
-app.get('/:retailerId', async (req, res) => {
-  if (!req.params.retailerId) {
-    res.status(404).send();
-  } else {
-    const retailer = req.params.retailerId;
-    getretailerInvoicesSummary(retailer, (result) => {
-      res.status(200).send(result);
-    });
-  }
-});
 
 
 app.listen(process.env.PORT || 8080, () => console.log(`server running on port ${process.env.PORT || 8080}!`));
