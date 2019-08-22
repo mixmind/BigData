@@ -40,7 +40,7 @@ class bigmlchart extends Component {
 
   componentDidMount = (e) => {
     axios
-      .get('http://localhost:8080/results')
+      .get('http://35.208.177.111:8080/results')
       .then((response) => {
         console.log('resp',response);
         const net = response.data;

@@ -58,6 +58,10 @@ class upload extends Component {
     history.push('/retailers');
   };
 
+  analyze = () => {
+    history.push('/analyze');
+  };
+
   render() {
     return (
       <Fragment>
@@ -69,6 +73,7 @@ class upload extends Component {
             <button onClick={this.mathprice} className="button-two">מחיר ברשת</button>
             <button onClick={this.mathbuy} className="button-two">כמות קניות</button>
             <button onClick={this.retailers} className="button-three">רשתות מזון</button>
+            <button onClick={this.analyze} className="button-three">חיזוי</button>
           </div>
         </div>
         <div className="buttons1">

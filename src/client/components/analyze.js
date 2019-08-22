@@ -37,31 +37,34 @@ class analyze extends Component {
     history.push('/retailers');
   };
 
+  analyze = () => {
+    history.push('/analyze');
+  };
 
   createAss = () => {
     axios
-      .get('http://localhost:8080/createAss').then((res) => {
+      .get('http://35.208.177.111:8080/createAss').then((res) => {
         console.log(res.data);
       });
   };
 
   getAss = () => {
     axios
-      .get('http://localhost:8080/getAss').then((res) => {
+      .get('http://35.208.177.111:8080/getAss').then((res) => {
         console.log(res.data);
       });
   };
 
   createMod = () => {
     axios
-      .get('http://localhost:8080/createMod').then((res) => {
+      .get('http://35.208.177.111:8080/createMod').then((res) => {
         console.log(res.data);
       });
   };
 
   getPred = () => {
     axios
-      .get('http://localhost:8080/getPred').then((res) => {
+      .get('http://35.208.177.111:8080/getPred').then((res) => {
       console.log(res);
         this.setState({ done: true });
       });
@@ -79,6 +82,7 @@ class analyze extends Component {
             <button onClick={this.mathprice} className="button-two">מחיר ברשת</button>
             <button onClick={this.mathbuy} className="button-two">כמות קניות</button>
             <button onClick={this.retailers} className="button-three">רשתות מזון</button>
+            <button onClick={this.analyze} className="button-three">חיזוי</button>
           </div>
           <div className="buttons">
             <div
@@ -89,7 +93,7 @@ class analyze extends Component {
               }}
             >
               <Ripples color="yellow">
-                <button onClick={this.createAss} className="button-three">createAss</button>
+                <button onClick={this.getPred} className="button-three">לקבל חיזוי</button>
               </Ripples>
             </div>
             &nbsp;&nbsp;&nbsp;
@@ -101,7 +105,7 @@ class analyze extends Component {
               }}
             >
               <Ripples color="yellow">
-                <button onClick={this.getAss} className="button-three">getAss</button>
+                <button onClick={this.createMod} className="button-three">ליצור מודל</button>
 
               </Ripples>
             </div>
@@ -114,7 +118,7 @@ class analyze extends Component {
               }}
             >
               <Ripples color="yellow">
-                <button onClick={this.createMod} className="button-three">createMod</button>
+                <button onClick={this.getAss} className="button-three">ליצור דטאסט</button>
               </Ripples>
             </div>
             &nbsp;&nbsp;&nbsp;
@@ -126,7 +130,7 @@ class analyze extends Component {
               }}
             >
               <Ripples color="yellow">
-                <button onClick={this.getPred} className="button-three">getPred</button>
+                <button onClick={this.createAss} className="button-three">ליצור חיזוי</button>
               </Ripples>
             </div>
           </div>
