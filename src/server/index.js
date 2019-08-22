@@ -10,10 +10,10 @@ fileUpload = require('express-fileupload'),
   getVolume, getPriceChange, getretailersData, getretailerInvoicesSummary
 } = require('./mongo/queries'),
 {
-  createAssociation, getAssociation, createModel, getPred
+  createAssociation, getAssociation, createModel, getPred,getResults
 } = require('./mongo/bigml'),
 { test } = require('./mongo/items');
-
+var model;
 
 const app = express();
 let resourceID;
@@ -68,7 +68,12 @@ app.get('/createMod', (req, res) => {
 });
 app.get('/getPred', (req, res) => {
   getPred(modelID, res, (result) => {
-    model = JSON.parse(result).confidences;
+    model = JSON.parse(result).probabilities;
+    res.status(200).send(model);
+  });
+});
+app.get('/results', async (req, res) => {
+  getResults(model,res,(result) => {
     res.status(200).send(model);
   });
 });

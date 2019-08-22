@@ -4,12 +4,13 @@ assert = require('assert');
 let resource; //= 'source/5d5c62c6e47684734100cec5';
 let dataset; //= 'dataset/5d5c64955299630520001b94';
 let model; //= 'model/5d5c65a1e47684734100cee6';
+let pred;
 
 function createAssociation(res, callBack) {
   try {
     console.log('Create association');
     exec('curl -X POST "https://bigml.io/andromeda/source?username=mixadence;api_key=f493645d34aac96d0bfa6220e24e06fa52649921" -F file=@src/server/mongo/tovar.csv', (err, stdout, stderr) => {
-     if (err) {
+      if (err) {
         console.log(err);
       }
       return callBack(stdout);
@@ -27,7 +28,6 @@ function getAssociation(resourceID, res, callBack) {
         console.log(err);
       }
       return callBack(stdout);
-
     });
   } catch (error) {
     console.error(error);
@@ -54,6 +54,7 @@ function getPred(modelID, res, callBack) {
       if (err) {
         console.log(err);
       }
+      pred = JSON.parse(stdout).probabilities;
       return callBack(stdout);
     });
   } catch (error) {
@@ -61,6 +62,10 @@ function getPred(modelID, res, callBack) {
   }
 }
 
+function getResults(model,res, callBack) {
+  return callBack(model);
+}
+
 module.exports = {
-  createAssociation, getAssociation, getPred, createModel
+  createAssociation, getAssociation, getPred, createModel, getResults
 };

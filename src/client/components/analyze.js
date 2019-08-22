@@ -9,6 +9,14 @@ import Ripples from 'react-ripples';
 
 
 class analyze extends Component {
+  constructor() {
+    super()
+    this.state = {
+      selectedFile: null,
+      loaded: 0,
+      done: false
+    }
+  }
   onClickHandler = () => {
     history.push('/');
   };
@@ -54,7 +62,8 @@ class analyze extends Component {
   getPred = () => {
     axios
       .get('http://localhost:8080/getPred').then((res) => {
-        console.log(res.data);
+      console.log(res);
+        this.setState({ done: true });
       });
   };
 
@@ -122,7 +131,9 @@ class analyze extends Component {
             </div>
           </div>
           <div className="charts_container center">
-            <Bigml />
+            <div>
+              {this.state.done ? <Bigml/> : <p> </p>}
+            </div>
           </div>
         </div>
       </Fragment>

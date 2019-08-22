@@ -13,7 +13,7 @@ import '../app.css';
 class bigmlchart extends Component {
   constructor(props) {
     super(props);
-    const optionsretailers = {
+    const optionsprobabilitys = {
       scales: {
         xAxes: [{
           stacked: true
@@ -32,51 +32,48 @@ class bigmlchart extends Component {
 
     this.state = {
       chartData: '',
-      retailerData: '',
+      probabilityData: '',
       showData: false,
-      retailersOptions: optionsretailers
+      probabilitysOptions: optionsprobabilitys
     };
   }
 
   componentDidMount = (e) => {
     axios
-      .get('http://35.208.177.111:8080/retailers')
+      .get('http://localhost:8080/results')
       .then((response) => {
-        console.log(response.data);
+        console.log('resp',response);
+        const net = response.data;
         const lables = [];
-        const invoiceCount = [];
-        const totalSum = [];
+        const probPercent = [];
 
-        for (const obj of response.data) {
-          lables.push(obj.name);
-          invoiceCount.push(obj.orders);
-          totalSum.push(obj.sum);
+        for (let i = 0; i < 25; i++) {
+          console.log(net[i]);
+          lables.push(net[i][0]);
+          probPercent.push(net[i][1]);
         }
 
         const data = {
           labels: lables,
           beginAtZero: true,
           datasets: [{
-            label: 'סה"כ הכנסה',
+            label: 'היסתברות לקניה ביחד',
             backgroundColor: ['#1220cd',
               '#a20ca1', '#00ba9f',
               '#e86e11', '#66dce4',
               '#e31a26', '#1e7bed',
-              '#fef735', '#f985bd'],
-            borderColor: '#2F4F4F',
-            borderWidth: 0,
-            data: totalSum,
-            yAxisID: 'y-axis-sum'
-          }, {
-            label: 'סה"כ חשבוניות',
-            backgroundColor: ['#5b667c',
-              '#830681', '#007a66',
-              '#903f0b', '#47939b',
-              '#b00d14', '#154891',
-              '#9d9620', '#bf5186'],
+              '#fef735', '#f985bd',
+              '#a20ca1', '#00ba9f',
+              '#e86e11', '#66dce4',
+              '#e31a26', '#1e7bed',
+              '#fef735', '#f985bd',
+              '#a20ca1', '#00ba9f',
+              '#e86e11', '#66dce4',
+              '#e31a26', '#1e7bed',
+              '#fef735', '#f985bd',],
             borderColor: '#00CED1',
             borderWidth: 0,
-            data: invoiceCount,
+            data: probPercent,
             yAxisID: 'y-axis-orders'
           }]
         };
@@ -91,7 +88,7 @@ class bigmlchart extends Component {
   }
 
   render() {
-    const { chartData, retailerData, retailersOptions } = this.state;
+    const { chartData, probabilityData, probabilitysOptions } = this.state;
 
     const options = {
       scales: {
