@@ -10,10 +10,11 @@ fileUpload = require('express-fileupload'),
   getVolume, getPriceChange, getretailersData, getretailerInvoicesSummary
 } = require('./mongo/queries'),
 {
-  createAssociation, getAssociation, createModel, getPred,getResults
+  createAssociation, getAssociation, createModel, getPred, getResults
 } = require('./mongo/bigml'),
-{ test } = require('./mongo/items');
-var model;
+{ exportData } = require('./mongo/items');
+
+let model;
 
 const app = express();
 let resourceID;
@@ -49,6 +50,9 @@ app.post('/upload', (req, res, next) => {
 });
 
 app.get('/createAss', (req, res) => {
+  exportData(res, (result) => {
+    console.log(result);
+  })
   createAssociation(res, (result) => {
     resourceID = JSON.parse(result).resource;
     res.status(200).send(resourceID);
@@ -73,7 +77,7 @@ app.get('/getPred', (req, res) => {
   });
 });
 app.get('/results', async (req, res) => {
-  getResults(model,res,(result) => {
+  getResults(model, res, (result) => {
     res.status(200).send(model);
   });
 });
@@ -121,8 +125,6 @@ app.post('/product-price', async (req, res) => {
     res.status(200).send(result);
   });
 });
-
-
 
 
 app.listen(process.env.PORT || 8080, () => console.log(`server running on port ${process.env.PORT || 8080}!`));

@@ -3,18 +3,21 @@ const assert = require('assert');
 // eslint-disable-next-line no-unused-vars
 const path = require('path');
 const fs = require('fs');
+
 const dbUrl = 'mongodb://mongoadmin:secret@localhost:27017';
 
 
-function test() {
+function exportData(res, callBack) {
   let db;
-  let file = fs.createWriteStream('tovar.csv');
-  let first1=`date,invoiceNum,item,item,item,item,item,item,item,item,item\n`
+  const file = fs.createWriteStream('tovar.csv');
+  const first1 = 'date,invoiceNum,item,item,item,item,item,item,item,item,item\n';
   fs.appendFile(
     'tovar.csv',
     first1,
     (err) => {
-      if (err) throw err;})
+      if (err) throw err;
+    }
+  );
   MongoClient.connect(dbUrl, { useNewUrlParser: true }, (err, client) => {
     assert.equal(null, err);
     console.log('Connected correctly to server');
@@ -28,18 +31,21 @@ function test() {
           // eslint-disable-next-line no-useless-concat
           else line += `${item.id}` + ',';
         });
-        line += '\n'
+        line += '\n';
         client.close();
         fs.appendFile(
-          'tovar.csv',
+          'tmp/tovar.csv',
           line,
           // eslint-disable-next-line no-shadow
           (err) => {
-            if (err) throw err;})
+            if (err) throw err;
+          }
+        );
         client.close();
       }
     );
   });
+  return callBack('Done');
 }
 
-module.exports = {test}
+module.exports = { exportData };

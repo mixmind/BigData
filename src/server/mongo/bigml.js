@@ -9,7 +9,7 @@ let pred;
 function createAssociation(res, callBack) {
   try {
     console.log('Create association');
-    exec('curl -X POST "https://bigml.io/andromeda/source?username=mixadence;api_key=f493645d34aac96d0bfa6220e24e06fa52649921" -F file=@src/server/mongo/tovar.csv', (err, stdout, stderr) => {
+    exec('curl -X POST "https://bigml.io/andromeda/source?username=mixadence;api_key=f493645d34aac96d0bfa6220e24e06fa52649921" -F file=@tmp/tovar.csv', (err, stdout, stderr) => {
       if (err) {
         console.log(err);
       }
