@@ -50,9 +50,7 @@ app.post('/upload', (req, res, next) => {
 });
 
 app.get('/createAss', (req, res) => {
-  exportData(res, (result) => {
-    console.log(result);
-  })
+  exportData();
   createAssociation(res, (result) => {
     resourceID = JSON.parse(result).resource;
     res.status(200).send(resourceID);
