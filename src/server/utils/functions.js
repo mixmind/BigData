@@ -7,14 +7,15 @@ const  MongoClient = require('mongodb').MongoClient,
     try {
 		console.log("entered hdfs");
       const response = await axios.put(
-          `http://172.19.0.2:50075/webhdfs/v1/invoices/${fileName}?op=CREATE&namenoderpcaddress=172.19.0.2:8020&createflag=&createparent=true&overwrite=false&user.name=root`,
+          `http://172.20.0.2:50075/webhdfs/v1/invoices/${fileName}?op=CREATE&namenoderpcaddress=172.20.0.2:8020&createflag=&createparent=true&overwrite=true&user.name=root`,
           invoice
         );
         if (response) {
           console.log("Invoice upload to hdfs");
         }
     } catch (error) {
-      console.error(`${fileName} already exists in hdfs`);
+      console.log(error)
+	    console.error(`${fileName} already exists in hdfs`);
     }
   }
 

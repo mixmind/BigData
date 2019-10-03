@@ -1,0 +1,207 @@
+
+> bigdata@ dev /home/BigData
+> concurrently "npm run server" "npm run client"
+
+[1] 
+[1] > bigdata@ client /home/BigData
+[1] > webpack-dev-server --mode development --devtool inline-source-map --hot
+[1] 
+[0] 
+[0] > bigdata@ server /home/BigData
+[0] > nodemon src/server/index.js
+[0] 
+[0] [33m[nodemon] 1.19.1[39m
+[0] [33m[nodemon] to restart at any time, enter `rs`[39m
+[0] [33m[nodemon] watching: /home/BigData/src/server/**/*[39m
+[0] [32m[nodemon] starting `node src/server/index.js`[39m
+[0] server running on port 8080!
+[1] clean-webpack-plugin: /home/BigData/dist has been removed.
+[1] [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:3000/
+[1] [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[1] [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/BigData
+[1] [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /index.html
+[1] [34mℹ[39m [90m｢wdm｣[39m: wait until bundle finished: /
+[1] [34mℹ[39m [90m｢wdm｣[39m: Hash: 685eea30aece62086853
+[1] Version: webpack 4.35.0
+[1] Time: 17834ms
+[1] Built at: 09/03/2019 9:11:33 AM
+[1]       Asset       Size  Chunks             Chunk Names
+[1]   bundle.js   8.68 MiB    main  [emitted]  main
+[1] favicon.ico   1.37 KiB          [emitted]  
+[1]  index.html  390 bytes          [emitted]  
+[1] Entrypoint main = bundle.js
+[1] [1] multi (webpack)-dev-server/client?http://0.0.0.0:3000 (webpack)/hot/dev-server.js ./src/client/index.js 52 bytes {main} [built]
+[1] [./node_modules/react-dom/index.js] 1.33 KiB {main} [built]
+[1] [./node_modules/react/index.js] 190 bytes {main} [built]
+[1] [./node_modules/strip-ansi/index.js] 161 bytes {main} [built]
+[1] [./node_modules/webpack-dev-server/client/index.js?http://0.0.0.0:3000] (webpack)-dev-server/client?http://0.0.0.0:3000 4.29 KiB {main} [built]
+[1] [./node_modules/webpack-dev-server/client/overlay.js] (webpack)-dev-server/client/overlay.js 3.51 KiB {main} [built]
+[1] [./node_modules/webpack-dev-server/client/socket.js] (webpack)-dev-server/client/socket.js 1.53 KiB {main} [built]
+[1] [./node_modules/webpack-dev-server/client/utils/createSocketUrl.js] (webpack)-dev-server/client/utils/createSocketUrl.js 2.77 KiB {main} [built]
+[1] [./node_modules/webpack-dev-server/client/utils/log.js] (webpack)-dev-server/client/utils/log.js 964 bytes {main} [built]
+[1] [./node_modules/webpack-dev-server/client/utils/reloadApp.js] (webpack)-dev-server/client/utils/reloadApp.js 1.63 KiB {main} [built]
+[1] [./node_modules/webpack-dev-server/client/utils/sendMessage.js] (webpack)-dev-server/client/utils/sendMessage.js 402 bytes {main} [built]
+[1] [./node_modules/webpack/hot sync ^\.\/log$] (webpack)/hot sync nonrecursive ^\.\/log$ 170 bytes {main} [built]
+[1] [./node_modules/webpack/hot/dev-server.js] (webpack)/hot/dev-server.js 1.59 KiB {main} [built]
+[1] [./node_modules/webpack/hot/emitter.js] (webpack)/hot/emitter.js 75 bytes {main} [built]
+[1] [./src/client/index.js] 167 bytes {main} [built]
+[1]     + 497 hidden modules
+[1] Child html-webpack-plugin for "index.html":
+[1]      1 asset
+[1]     Entrypoint undefined = index.html
+[1]     [./node_modules/html-webpack-plugin/lib/loader.js!./public/index.html] 498 bytes {0} [built]
+[1]     [./node_modules/lodash/lodash.js] 528 KiB {0} [built]
+[1]     [./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {0} [built]
+[1]     [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 497 bytes {0} [built]
+[1] [34mℹ[39m [90m｢wdm｣[39m: Compiled successfully.
+[0] Create association
+[0] Connected correctly to server
+[0] Get association
+[0] Get association
+[0] Create model
+[0] Create model
+[0] Create model
+[0] Create model
+[0] Create model
+[0] Create model
+[0] Create model
+[0] Get prediction
+[0] Get prediction
+[0] {
+[0]   productName: 'brown bread',
+[0]   start: '2019-07-28T09:13:26.000Z',
+[0]   end: '2019-09-03T09:13:26.944Z'
+[0] }
+[0] Connected correctly to server
+[0] {
+[0]   productName: 'white bread',
+[0]   start: '2019-08-06T09:13:35.000Z',
+[0]   end: '2019-09-03T09:13:35.176Z'
+[0] }
+[0] Connected correctly to server
+[0] Connected correctly to server
+[0] [
+[0]   {
+[0]     _id: 5d592438f29145773e507bee,
+[0]     provider: 'רמי לוי שיווק השקמה',
+[0]     lastModified: 2019-08-28T10:03:26.262Z,
+[0]     invoices: [
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object]
+[0]     ],
+[0]     totalOrders: 15,
+[0]     totalSum: 2131.33
+[0]   },
+[0]   {
+[0]     _id: 5d59243df29145773e507bf0,
+[0]     provider: 'טיב-טעם',
+[0]     lastModified: 2019-08-28T12:27:23.471Z,
+[0]     invoices: [
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object]
+[0]     ],
+[0]     totalOrders: 16,
+[0]     totalSum: 1962.02
+[0]   },
+[0]   {
+[0]     _id: 5d592443f29145773e507bf2,
+[0]     provider: 'חצי-חינם',
+[0]     lastModified: 2019-08-28T12:27:47.057Z,
+[0]     invoices: [
+[0]       [Object], [Object], [Object],
+[0]       [Object], [Object], [Object],
+[0]       [Object], [Object], [Object],
+[0]       [Object], [Object], [Object],
+[0]       [Object], [Object], [Object],
+[0]       [Object], [Object], [Object]
+[0]     ],
+[0]     totalOrders: 18,
+[0]     totalSum: 2581.6
+[0]   },
+[0]   {
+[0]     _id: 5d592455f29145773e507bf6,
+[0]     provider: 'AM:PM',
+[0]     lastModified: 2019-08-18T10:19:34.624Z,
+[0]     invoices: [
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object]
+[0]     ],
+[0]     totalOrders: 11,
+[0]     totalSum: 1394.24
+[0]   },
+[0]   {
+[0]     _id: 5d592460f29145773e507bf9,
+[0]     provider: 'שופרסל',
+[0]     lastModified: 2019-08-18T12:39:18.363Z,
+[0]     invoices: [
+[0]       [Object], [Object], [Object],
+[0]       [Object], [Object], [Object],
+[0]       [Object], [Object], [Object],
+[0]       [Object], [Object], [Object],
+[0]       [Object], [Object], [Object],
+[0]       [Object], [Object], [Object],
+[0]       [Object], [Object], [Object]
+[0]     ],
+[0]     totalOrders: 21,
+[0]     totalSum: 3237.2299999999996
+[0]   },
+[0]   {
+[0]     _id: 5d59246cf29145773e507bfc,
+[0]     provider: 'אושר עד',
+[0]     lastModified: 2019-08-21T18:03:54.794Z,
+[0]     invoices: [
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object]
+[0]     ],
+[0]     totalOrders: 10,
+[0]     totalSum: 1421.5900000000001
+[0]   },
+[0]   {
+[0]     _id: 5d592483f29145773e507c01,
+[0]     provider: 'ויקטורי',
+[0]     lastModified: 2019-08-18T10:19:58.227Z,
+[0]     invoices: [
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object]
+[0]     ],
+[0]     totalOrders: 11,
+[0]     totalSum: 1453.22
+[0]   },
+[0]   {
+[0]     _id: 5d5924daf29145773e507c11,
+[0]     provider: 'מגה',
+[0]     lastModified: 2019-08-18T10:19:11.450Z,
+[0]     invoices: [
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object],
+[0]       [Object], [Object]
+[0]     ],
+[0]     totalOrders: 8,
+[0]     totalSum: 1005.2399999999999
+[0]   }
+[0] ]
+[0] Get prediction

@@ -58,19 +58,19 @@ class bigmlchart extends Component {
           beginAtZero: true,
           datasets: [{
             label: 'היסתברות לקניה ביחד',
-            backgroundColor: ['#1220cd',
-              '#a20ca1', '#00ba9f',
-              '#e86e11', '#66dce4',
-              '#e31a26', '#1e7bed',
-              '#fef735', '#f985bd',
-              '#a20ca1', '#00ba9f',
-              '#e86e11', '#66dce4',
-              '#e31a26', '#1e7bed',
-              '#fef735', '#f985bd',
-              '#a20ca1', '#00ba9f',
-              '#e86e11', '#66dce4',
-              '#e31a26', '#1e7bed',
-              '#fef735', '#f985bd',],
+	    backgroundColor: ['#1220cd',
+		                  '#a20ca1', '#00ba9f',
+		                  '#e86e11', '#66dce4',
+		                  '#e31a26', '#1e7bed',
+		                  '#fef735', '#f985bd',
+		                  '#a20ca1', '#00ba9f',
+		                  '#e86e11', '#66dce4',
+		                  '#e31a26', '#1e7bed',
+		                  '#fef735', '#f985bd',
+		                  '#a20ca1', '#00ba9f',
+		                  '#e86e11', '#66dce4',
+		                  '#e31a26', '#1e7bed',
+		                  '#fef735', '#f985bd',],
             borderColor: '#00CED1',
             borderWidth: 0,
             data: probPercent,
@@ -131,8 +131,8 @@ class bigmlchart extends Component {
             <BarChart
               data={chartData}
               options={options}
-              width={400}
-              height={200}
+              width={800}
+              height={400}
             />
           </div>
         </div>
