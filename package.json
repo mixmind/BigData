@@ -38,7 +38,7 @@
     "react-ripples": "^2.1.1",
     "react-router-dom": "^5.0.1",
     "react-select": "^3.0.4",
-    "recharts": "^1.6.2",
+    "recharts": "^2.1.14",
     "redis": "^2.8.0",
     "regenerator-runtime": "^0.13.2",
     "webhdfs": "^1.2.0"
