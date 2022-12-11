@@ -24,7 +24,7 @@
     "dateformat": "^3.0.3",
     "dotenv": "^8.1.0",
     "eclairjs": "^0.10.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-fileupload": "^1.1.5",
     "formidable": "^1.2.1",
     "json2csv": "^4.5.2",
